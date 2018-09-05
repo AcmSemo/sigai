@@ -1,0 +1,64 @@
+.footer, .footer ul li {
+	padding: 0.25em;
+}
+
+.jumbotron {
+	margin: 1.5em 0;
+}
+
+.dark {
+	background-color: #111;
+}
+
+.txt-dark, .txt-dark:focus {
+	background-color: #262626;
+	font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+input:focus, textarea:focus {
+	border-color: lime !important;
+	outline:0px !important;
+	box-shadow: none !important;
+}
+
+.container-fluid {
+	margin: 0;
+}
+
+.nav-link, ul li a.text-light {
+	transition: color 0.3s;
+}
+
+.nav-link:hover, ul li a.text-light:hover {
+	color: lime !important;
+}
+
+nav a.navbar-brand {
+	transition: text-shadow 0.5s;
+}
+
+nav a.navbar-brand:hover {
+	text-shadow: 1px 1px 5px #FFF;
+}
+
+html {
+	font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+	html {
+		font-size: 1.2rem;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	html {
+		font-size: 1.4rem;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	html {
+		font-size: 1.6rem;
+	}
+}

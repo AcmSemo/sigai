@@ -1,0 +1,95 @@
+* {
+	font-family: helvetica;
+}
+
+body {
+	background-color: #262626;
+	color: #FFFFFF;
+}
+
+main {
+	margin: 2em 0;
+}
+
+hr {
+	border-color: #FFF;
+}
+
+header {
+	margin-top: 1em;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+
+code{
+	color: lime;
+}
+
+.hero {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 500px;
+	max-width: 100%;
+	opacity: 0.7;
+	image-orientation: 0deg;
+}
+
+#indexHero {
+	background-image: url(../images/mmai21-7.png);
+	background-position: 40% 60%;
+}
+#eventsHero {
+	background-image: url(../images/mmai20-4.JPG);
+	background-position: center bottom;
+}
+#contactHero {
+	background-image: url(../images/mmai21-5.jpg);
+	background-position: center;
+}
+#registerHero {
+	background-image: url(../images/mmai21-3.JPG);
+	background-position: center 60%;
+}
+#resourcesHero {
+	background-image: url(../images/mmai21-2.JPG);
+	background-position: right center;
+}
+
+.contactInfo {
+	margin: 0;
+}
+	.contactInfo span:nth-child(1) {
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	.contactInfo span:nth-child(3) {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+#eventList ul {
+	list-style: none;
+}
+	#eventList ul li:first-child {
+		font-size: 1.3em;
+		text-decoration: underline;
+		padding-bottom: 0.5em;
+	}
+
+@media screen and (max-width: 600px) {
+	#topLink {
+		visibility: visible;
+		color: white;
+	}
+	.hero {
+		min-height: 300px !important;
+		max-width: 600px !important;
+	}
+	#indexHero, #registerHero, #resourcesHero {
+		background-position: center;
+	}
+}
