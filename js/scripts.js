@@ -11,7 +11,7 @@
 
 // Global Variables
 
-const presidentEmail = "amgunther1s@semo.edu";
+const presidentEmail = "jddevore1s@semo.edu";
 
 // EVENT LISTS
 
