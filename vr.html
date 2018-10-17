@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#000000">
+		<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+		<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+		<script src="js/a-script.js"></script>
+        <title>SIGAI | VR</title>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-mixin id="screen"
+                         geometry="primitive:plane; height:3; width:4;"
+                         material="color: #333333; metalness: 0.75;"
+						 event-set__enter="_event: mouseenter; material.color: #CCC;"
+						 event-set__leave="_event: mouseleave; material.color: #333333;">
+                </a-mixin>
+				
+				<a-mixin id="ground"
+						geometry="primitive:plane; height:20; width:20;"
+						position="0 -1.6 0" 
+						rotation="-90 0 0">
+				</a-mixin>
+				
+                <img id="bg" src="images/greenSpace.png" />
+				<img id="tile" src="images/tile1.jpg" />
+            </a-assets>
+            
+			<!-- Camera -->
+            <a-entity id="mainCam" camera="active:true" lightem-up=""
+                      look-controls data-aframe-default-camera>
+				<a-entity cursor="fuse: true; fuseTimeout: 500" 
+						raycaster="objects: .window; far: 20;" 
+						position="0 0 -1"
+						geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+						material="color: gray; shader: flat; opacity: 0.75;">
+				</a-entity>
+            </a-entity>
+			
+			<a-entity id="pentagon">
+				<!-- Logo -->
+				<a-entity id="screen1" mixin="screen" class="window" look-at="[camera]" position="0 0 -3.5" rotation="0 0 0">
+					<a-animation 
+						attribute="position"
+						dur="2000"
+						fill="forwards"
+						direction="alternate"
+						easing="linear"
+						to="0 0.1 -3.5"
+						from="0 0 -3.5"
+						repeat="indefinite">
+					</a-animation>
+				</a-entity>
+				
+				<!-- About -->
+				<a-entity id="screen2" mixin="screen" class="window" look-at="[camera]" position="-3.25 0 -1.25" rotation="0 72 0">
+					<a-animation attribute="position"
+						dur="2050"
+						fill="forwards"
+						direction="alternate"
+						easing="linear"
+						to="-3.25 0.1 -1.25"
+						from="-3.25 0 -1.25"
+						repeat="indefinite">
+					</a-animation>
+				</a-entity>
+				
+				<!-- 4 Photos -->
+				<a-entity id="screen3" mixin="screen" class="window" look-at="[camera]" position="-2 0 2.75" rotation="0 144 0">
+					<a-animation attribute="position"
+						dur="1950"
+						fill="forwards"
+						direction="alternate"
+						easing="linear"
+						to="-2 0.1 2.75"
+						from="-2 0 2.75"
+						repeat="indefinite">
+					</a-animation>
+				</a-entity>
+				
+				<!-- Contact Info -->
+				<a-entity id="screen4" mixin="screen" class="window" look-at="[camera]" position="2 0 2.75" rotation="0 -144 0">
+					<a-animation attribute="position"
+						dur="2000"
+						fill="forwards"
+						direction="alternate"
+						easing="linear"
+						to="2 0.1 2.75"
+						from="2 0 2.75"
+						repeat="indefinite">
+					</a-animation>
+				</a-entity>
+				
+				<!-- Add a projects pane in the future -->
+				<!-- Return to Website -->
+				<a-entity id="screen5" mixin="screen" class="window" look-at="[camera]" position="3.25 0 -1.25" rotation="0 -72 0">
+					<a-animation attribute="position"
+						dur="2075"
+						fill="forwards"
+						direction="alternate"
+						easing="linear"
+						to="3.25 0.1 -1.25"
+						from="3.25 0 -1.25"
+						repeat="indefinite">
+					</a-animation>
+				</a-entity>
+            </a-entity>
+			
+            <a-entity mixin="ground" material="src: #tile; repeat: 10 10;"></a-entity>
+            
+            <a-sky src="#bg" radius="10">
+				<a-animation attribute="rotation"
+						   dur="200000"
+						   fill="forwards"
+						   easing="linear"
+						   to="360 360 0"
+						   repeat="indefinite">
+			   </a-animation>
+			</a-sky>
+			
+			<a-entity light="type: hemisphere; color: #FFF; groundColor: #000000; intensity: 2;"></a-entity>
+			
+        </a-scene>
+    </body>
+</html>
