@@ -75,6 +75,9 @@ code{
 	display:inline-block;
 	padding: 0.5em;
 	float:left;
+	background-color: #343A40;
+	border-radius:5px;
+	margin: 0.5em;
 }
 
 #eventList ul {

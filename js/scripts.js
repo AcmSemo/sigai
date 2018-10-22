@@ -16,20 +16,24 @@ const presidentEmail = "jddevore1s@semo.edu";
 // EVENT LISTS
 
 const fall18 = [
-	"Fall 2018:",
-	"8/27: General Meeting"
+	"Fall 2018",
+	"8/27: General Meeting with ACM",
+	"10/12: General Meeting",
+	"10/19: Distributed Computing by Dr. Ziping Liu",
+	"10/26: Hololens Debut",
+	"11/02: Git'n Scriptin' by Stephen Sladek"
 ];
 
 const spring18 = [
-	"Spring 2018:",
-	"2/13: Bresenham's Line Algorithm for Line of Sight - Aaron Gunther",
-	"2/20: Linux Navigation - Michael Ranciglio",
+	"Spring 2018",
+	"2/13: Bresenham's Line Algorithm for Line of Sight by Aaron Gunther",
+	"2/20: Linux Navigation by Michael Ranciglio",
 	"4/14 - 15: MegaMinerAI 21 at Missouri S&T",
 	"4/15: Andrew Smith places 5th in student bracket at MegaMiner"
 ];
 
 const fall17 = [
-	"Fall 2017:",
+	"Fall 2017",
 	"9/12: SIGAI is created",
 	"11/11 - 12: MegaMinerAI 20 at Missouri S&T",
 	"11/12: Michael Ranciglio, Aaron Gunther, and Tatianna Reinbolt place 3rd in globals at MegaMiner"
@@ -44,10 +48,8 @@ var eventList = [
 // Loads the events into the div eventList on events.html
 
 function loadEvents(){
-	var eventDiv = document.getElementById('eventList');
-	var ul;
-	var li;
-	var info;
+	let eventDiv = document.getElementById('eventList');
+	let ul, li, info;
 	for(let i = 0; i < eventList.length; i++){
 		info = eventList[i]; //current semester of events
 		ul = document.createElement("ul");
@@ -64,12 +66,12 @@ function loadEvents(){
 
 function sendMail(){
 	try{
-		var subject = encodeURI(document.forms["signUp"]["subject"].value);
-		var name = encodeURI(document.forms["signUp"]["name"].value);
-		var email = encodeURI(document.forms["signUp"]["email"].value);
-		var msg = encodeURI(document.forms["signUp"]["msg"].value);
-		var body = "Name: " + name + "%0D%0A" + "Email: " + email + "%0D%0A" + msg;
-		var mail = "mailto:scsladek1s@semo.edu?subject=" + subject + "&body=" + body;
+		let subject = encodeURI(document.forms["signUp"]["subject"].value);
+		let name = encodeURI(document.forms["signUp"]["name"].value);
+		let email = encodeURI(document.forms["signUp"]["email"].value);
+		let msg = encodeURI(document.forms["signUp"]["msg"].value);
+		let body = "Name: " + name + "%0D%0A" + "Email: " + email + "%0D%0A" + msg;
+		let mail = "mailto:" + presidentEmail + "?subject=" + subject + "&body=" + body;
 		window.location.href = mail;
 	} catch(e) {
 		window.alert("Message failed to send.");
