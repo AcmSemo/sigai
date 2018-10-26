@@ -29,10 +29,11 @@
 				
                 <img id="bg" src="images/greenSpace.png" />
 				<img id="tile" src="images/tile1.jpg" />
+				<img id="logo" src="images/Acmsigai.png" />
             </a-assets>
             
 			<!-- Camera -->
-            <a-entity id="mainCam" camera="active:true" wasd-controls
+            <a-entity id="mainCam" camera="active:true"
                       look-controls data-aframe-default-camera>
 				<a-entity cursor="fuse: true; fuseTimeout: 500" 
 						raycaster="objects: .window; far: 20;" 
@@ -55,11 +56,8 @@
 						from="0 0 -3.5"
 						repeat="indefinite">
 					</a-animation>
-					<a-text geometry="primitive:plane; height:1.5; width:2;" 
-						material="color:black; side:front; shader:flat;"
-						color="lime" position="0 0 1.0" align="center"
-						value="SIGAI">
-					</a-text>
+					<a-image height="1.5" width="1.5" position="0 0 1.0" src="#logo">
+					</a-image>
 				</a-entity>
 				
 				<!-- About -->
@@ -91,11 +89,10 @@
 						from="-2 0 2.75"
 						repeat="indefinite">
 					</a-animation>
-					<a-text geometry="primitive:plane; height:1.5; width:2;" 
-						material="color:black; side:front; shader:flat;"
-						color="lime" position="0 0 1.0" align="center"
-						value="SIGAI">
-					</a-text>
+					<a-image height="1" width="1" position="0.5 0.5 1.0" src="#logo"></a-image>
+					<a-image height="1" width="1" position="-0.5 0.5 1.0" src="#logo"></a-image>
+					<a-image height="1" width="1" position="0.5 -0.5 1.0" src="#logo"></a-image>
+					<a-image height="1" width="1" position="-0.5 -0.5 1.0" src="#logo"></a-image>
 				</a-entity>
 				
 				<!-- Contact Info -->
