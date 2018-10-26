@@ -32,7 +32,7 @@
             </a-assets>
             
 			<!-- Camera -->
-            <a-entity id="mainCam" camera="active:true" lightem-up=""
+            <a-entity id="mainCam" camera="active:true" wasd-controls
                       look-controls data-aframe-default-camera>
 				<a-entity cursor="fuse: true; fuseTimeout: 500" 
 						raycaster="objects: .window; far: 20;" 
@@ -55,6 +55,11 @@
 						from="0 0 -3.5"
 						repeat="indefinite">
 					</a-animation>
+					<a-text geometry="primitive:plane; height:1.5; width:2;" 
+						material="color:black; side:front; shader:flat;"
+						color="lime" position="0 0 1.0" align="center"
+						value="SIGAI">
+					</a-text>
 				</a-entity>
 				
 				<!-- About -->
@@ -68,6 +73,11 @@
 						from="-3.25 0 -1.25"
 						repeat="indefinite">
 					</a-animation>
+					<a-text geometry="primitive:plane; height:3; width:4;" scale="0.5 0.5 0.5"
+						material="color:black; side:front; shader:flat;"
+						color="lime" position="0 0 1.0" align="center" wrapCount="5"
+						value="SIGAI-SEMO is a group of\n SEMO students focused on the\n development of new technology,\n with particular interest in AI \n and distributed computing.">
+					</a-text>
 				</a-entity>
 				
 				<!-- 4 Photos -->
@@ -81,6 +91,11 @@
 						from="-2 0 2.75"
 						repeat="indefinite">
 					</a-animation>
+					<a-text geometry="primitive:plane; height:1.5; width:2;" 
+						material="color:black; side:front; shader:flat;"
+						color="lime" position="0 0 1.0" align="center"
+						value="SIGAI">
+					</a-text>
 				</a-entity>
 				
 				<!-- Contact Info -->
@@ -94,6 +109,11 @@
 						from="2 0 2.75"
 						repeat="indefinite">
 					</a-animation>
+					<a-text geometry="primitive:plane; height:1.5; width:2;" 
+						material="color:black; side:front; shader:flat;"
+						color="lime" position="0 0 1.0" align="center"
+						value="Contact\n zliu@semo.edu\n for more info.">
+					</a-text>
 				</a-entity>
 				
 				<!-- Add a projects pane in the future -->
@@ -108,7 +128,13 @@
 						from="3.25 0 -1.25"
 						repeat="indefinite">
 					</a-animation>
+					<a-text geometry="primitive:plane; height:1.65; width:2.2;" scale="0.9 0.9 0.9"
+						material="color:black; side:front; shader:flat;"
+						color="lime" position="0 0 1.0" align="center"
+						value="click( ) => { HOME }">
+					</a-text>
 				</a-entity>
+				
             </a-entity>
 			
             <a-entity mixin="ground" material="src: #tile; repeat: 10 10;"></a-entity>
