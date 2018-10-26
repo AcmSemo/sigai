@@ -89,6 +89,19 @@ code{
 		padding-bottom: 0.5em;
 	}
 
+#vr{
+	height:20px;
+	width:32px;
+	margin: 6px;
+	background: url(../images/vr_icon_grey.png) no-repeat;
+	background-size: 32px 20px;
+	display: inline-block;
+}
+	#vr:hover {
+		background: url(../images/vr_icon_green.png) no-repeat;
+		background-size: 32px 20px;
+	}
+
 @media screen and (max-width: 600px) {
 	#topLink {
 		visibility: visible;
