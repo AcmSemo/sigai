@@ -21,7 +21,9 @@ const fall18 = [
 	"10/12: General Meeting",
 	"10/19: Distributed Computing by Dr. Ziping Liu",
 	"10/26: Hololens Debut",
-	"11/02: Git'n Scriptin' by Stephen Sladek"
+	"11/02: Git'n Scriptin' by Stephen Sladek",
+	'11/09: Git Gud by Jeremy Devore',
+	'11/30: A* Pathfinding Heuristics by Jesse Raines'
 ];
 
 const spring18 = [
