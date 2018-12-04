@@ -17,4 +17,12 @@ AFRAME.registerComponent('maketext',{
 		});
 	}
 });
-
+/*
+AFRAME.registerComponent('homeClick',{
+	init: function(){
+		this.el.addEventListener('click', function(){
+			window.location.href = "index.html";
+		});
+	}
+});
+*/

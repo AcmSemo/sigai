@@ -10,10 +10,20 @@
 		<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
 		<script src="js/a-script.js"></script>
         <title>SIGAI | VR</title>
+		<script>
+			AFRAME.registerComponent('homeclick',{
+				init: function(){
+					this.el.addEventListener('click', function(){
+						window.open("index.html","_blank");
+					});
+				}
+			});
+		</script>
     </head>
     <body>
         <a-scene>
-            <a-assets>
+		
+            <a-assets>	
                 <a-mixin id="screen"
                          geometry="primitive:plane; height:3; width:4;"
                          material="color: #333333; metalness: 0.75;"
@@ -29,7 +39,7 @@
 				
                 <img id="bg" src="images/greenSpace.png" />
 				<img id="tile" src="images/tile1.jpg" />
-				<img id="logo" src="images/Acmsigai.png" />
+				<img id="logo" src="images/Acmsigai.png" />	
             </a-assets>
             
 			<!-- Camera -->
@@ -115,7 +125,7 @@
 				
 				<!-- Add a projects pane in the future -->
 				<!-- Return to Website -->
-				<a-entity id="screen5" mixin="screen" class="window" look-at="[camera]" position="3.25 0 -1.25" rotation="0 -72 0">
+				<a-entity id="screen5" mixin="screen" class="window" look-at="[camera]" position="3.25 0 -1.25" rotation="0 -72 0" homeclick="">
 					<a-animation attribute="position"
 						dur="2075"
 						fill="forwards"
@@ -125,11 +135,13 @@
 						from="3.25 0 -1.25"
 						repeat="indefinite">
 					</a-animation>
+					
 					<a-text geometry="primitive:plane; height:1; width:2.2;" scale="0.9 0.9 0.9"
 						material="color:black; side:front; shader:flat;"
 						color="lime" position="0 0 1.0" align="center"
-						value="click( ) => { HOME }">
+						value="click( ) => { HOME; }">
 					</a-text>
+					
 				</a-entity>
 				
             </a-entity>
