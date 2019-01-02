@@ -2,18 +2,21 @@
 
 /*
  * For regular maintenance of events, you'll need to do the following:
- * 1) add a list of events for the semester following the same scheme as below.
- * 2) modify getSemester(id) to return the list you created for the corresponding id
- * 3) add a ul in events.html with the next id in line (so if we're on event29 add event30)
+ * 1) add an array of events for the semester following the same scheme as below.
+ * 2) add the array to the eventList.
  *
  * Also be sure to change out the president email address whenever a new president is elected!
  */
 
-// Global Variables
-
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+// EMAIL
 const presidentEmail = "jddevore1s@semo.edu";
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // EVENT LISTS
+const spring19 = [
+	"Spring 2019"
+];
 
 const fall18 = [
 	"Fall 2018",
@@ -22,8 +25,10 @@ const fall18 = [
 	"10/19: Distributed Computing by Dr. Ziping Liu",
 	"10/26: Hololens Debut",
 	"11/02: Git'n Scriptin' by Stephen Sladek",
-	'11/09: Git Gud by Jeremy Devore',
-	'11/30: A* Pathfinding Heuristics by Jesse Raines'
+	"11/09: Git Gud by Jeremy Devore",
+	"11/10 - 11: MegaMinerAI 22 at Missouri S&T",
+	"11/11: Derek Mandl and Stephen Sladek place 4th in student bracket at MegaMiner",
+	"11/30: A* Pathfinding Heuristics by Jesse Raines"
 ];
 
 const spring18 = [
@@ -42,6 +47,7 @@ const fall17 = [
 ];
 
 var eventList = [
+	spring19,
 	fall18,
 	spring18,
 	fall17
@@ -64,8 +70,8 @@ function loadEvents(){
 	}
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // REGISTRATION FORM
-
 function sendMail(){
 	try{
 		let subject = encodeURI(document.forms["signUp"]["subject"].value);
