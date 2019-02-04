@@ -15,7 +15,11 @@ const presidentEmail = "jddevore1s@semo.edu";
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 // EVENT LISTS
 const spring19 = [
-	"Spring 2019"
+	"Spring 2019",
+	"1/18: Coursera Machine Learning - Overview with Jeremy Devore",
+	"1/25: Coursera Machine Learning - Linear Regression with Jeremy Devore",
+	"2/1: Coursera Machine Learning - Octave with Jeremy Devore",
+	"2/8: Coursera Machine Learning with Jeremy Devore"
 ];
 
 const fall18 = [
