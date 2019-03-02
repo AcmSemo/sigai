@@ -18,10 +18,11 @@ const spring19 = [
 	"Spring 2019",
 	"1/18: Coursera Machine Learning - Overview with Jeremy Devore",
 	"1/25: Coursera Machine Learning - Linear Regression with Jeremy Devore",
-	"2/1: Coursera Machine Learning - Octave with Jeremy Devore",
-	"2/8: General Meeting",
+	"2/01: Coursera Machine Learning - Octave with Jeremy Devore",
+	"2/08: General Meeting",
 	"2/22: General Meeting",
-	"3/8: Python Basics by Jesse Raines"
+	"3/01: Python Basics part 1 by Jesse Raines",
+	"3/22: Python Basics part 2 by Jesse Raines"
 ];
 
 const fall18 = [
